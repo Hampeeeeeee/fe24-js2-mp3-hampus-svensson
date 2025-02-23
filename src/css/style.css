@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#bookForm {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#authorInput, #titleInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+}
+
+#authorInput, #titleInput::placeholder {
+    color: #aaa;
+}
+
+#postBook {
+    background-color: #95a0a8;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#postBook:hover {
+    background-color: #005bb5;
+    transform: scale(1.1);
+}
+
+#bookList {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#bookList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#bookList li:last-child {
+    border-bottom: none; 
+}
+
+/* Grundstil för knappar */
+.review-button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* När musen hovrar över like-knappen */
+.review-button.like:hover {
+    background-color: #d4edda; /* Ljusgrön */
+    border-color: #28a745; /* Grön */
+}
+
+/* När like-knappen är klickad */
+.review-button.like:active {
+    background-color: #28a745; /* Grön */
+    color: white;
+    transform: scale(0.95);
+}
+
+/* När musen hovrar över dislike-knappen */
+.review-button.dislike:hover {
+    background-color: #f8d7da; /* Ljusröd */
+    border-color: #dc3545; /* Röd */
+}
+
+/* När dislike-knappen är klickad */
+.review-button.dislike:active {
+    background-color: #dc3545; /* Röd */
+    color: white;
+    transform: scale(0.95);
+}
